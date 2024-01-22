@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MarketList.MainPage">
+
+    <StackLayout Background="#FF8C00">
+
+        <StackLayout>
+            <Frame BackgroundColor="Orange">
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions  >
+                        <Label  Text="Категории" FontSize="45" TextColor="White" Grid.Column="0" Grid.ColumnSpan="2"  VerticalOptions="Center"  HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <ListView x:Name="categoryListView"  Grid.Row="0" Grid.Column="0" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Button  CornerRadius="25" BackgroundColor="#D3D3D3" Text="{Binding Name}"  Clicked="CategoryButton_Clicked"  />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+        </StackLayout>
+       
+
+
+    </StackLayout>
+
+</ContentPage>

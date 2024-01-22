@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarketList"
+             x:Class="MarketList.AppShell">
+    <FlyoutItem Title="Категории">
+        <ShellContent Title="Категории" Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}"/>
+        <ShellContent Title="Редактирование" Route="AddPage" ContentTemplate="{DataTemplate local:AddPage}"/>
+    </FlyoutItem>
+   
+     
+
+</Shell>

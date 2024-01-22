@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="MarketList.AddPage">
+    <ContentPage.Content>
+        
+        <StackLayout Background="#FFB500">
+            <ListView x:Name="CategoryList" ItemSelected="CategoryList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Name}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label HorizontalOptions="Center" Text="Название категории:" FontAttributes="Bold" FontSize="35" TextColor="White" />
+            <Entry x:Name="AddEntry"/>
+            <Button Clicked="BtnAdd" BackgroundColor="Orange" Text="Добавить"></Button>
+            <Button Clicked="BtnEdit" BackgroundColor="Orange" Text="Сохранить"></Button>
+            <Button Clicked="BtnDel" BackgroundColor="Orange" Text="Удалить"></Button>
+            <Label HorizontalTextAlignment="Center" Text="" FontSize="26" x:Name="messagelabel"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
