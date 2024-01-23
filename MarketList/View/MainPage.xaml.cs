@@ -31,6 +31,8 @@ namespace MarketList
         {
             Button btn = sender as Button;
             Shell.Current.GoToAsync($"CategoryList?CategoryName={btn.Text}");
+           //CategoryName={btn.Text} - это параметр, который передается в эту страницу.
+           //В данном случае, текст кнопки (btn.Text) используется как значение параметра "CategoryName".
          
         }
 
