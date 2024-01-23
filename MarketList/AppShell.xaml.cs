@@ -16,9 +16,7 @@ namespace MarketList
     {
         public AppShell()
         {
-            InitializeComponent();
-            Routing.RegisterRoute("AddPage", typeof(MarketList.AddPage));
-            Routing.RegisterRoute("MainPage", typeof(MarketList.MainPage));
+            InitializeComponent();         
             Routing.RegisterRoute("CategoryList", typeof(MarketList.CategoryList));
         }
     }
