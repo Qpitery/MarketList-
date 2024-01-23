@@ -15,7 +15,7 @@ using static MarketList.MainPage;
 namespace MarketList
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [QueryProperty(nameof(CategoryName), "CategoryName")]
+    [QueryProperty(nameof(CategoryName), "CategoryName")]  //Свойство запроса, CategoryName - это имя свойства.
     public partial class CategoryList : ContentPage
     {
         public Category _category ;
@@ -23,7 +23,7 @@ namespace MarketList
         
         public string CategoryName
         {
-            get => categoryName;
+            get => categoryName; //Метод доступа в C# - это часть свойства (property), которая определяет, как можно получить (через get) и установить (через set) значение свойства.
             set
             {             
                 categoryName = value;
