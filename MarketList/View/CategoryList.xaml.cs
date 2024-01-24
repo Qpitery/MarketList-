@@ -15,7 +15,7 @@ using static MarketList.MainPage;
 namespace MarketList
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [QueryProperty(nameof(CategoryName), "CategoryName")]  //Свойство запроса, CategoryName - это имя свойства.
+    [QueryProperty(nameof(CategoryName), "CategoryName")]  //Свойство запроса, CategoryName - это имя свойства. Идентификатор параметра запроса.
     public partial class CategoryList : ContentPage
     {
         public Category _category ;
